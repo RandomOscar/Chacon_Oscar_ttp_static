@@ -4,12 +4,13 @@
 
 <h1> My name is Oscar Chacon and my favorite hobby is play online games with my friends </h1>
 <h2> The current time is 7:14:56 </h2>
-<p> The current time is <span id='date-time'></span>.<p>
+<b id="time">The current time is: </b>
+  
+  <script>
+    let currentDate = new date()
+    let time = currentDate.getHours() + ":"+ currentDate.getMinutes() + ":" + currentDate.getSeconds();
+    
+     document.getElementById("time").innerHTML = "The current time is: " + time;
+    </script>
 </body>
 </html>
-
-
-<script>
-  var dt = new Date();
-  document.getElementById('date-time').innerHTML=dt;
-  </script>
