@@ -3,13 +3,26 @@
 <body>
 
 <h1> My name is Oscar Chacon and my favorite hobby is play online games with my friends </h1>
-<h2> The current time is 7:14:56 </h2>
-<b id="time">The current time is: </b>
-  
-  <script>
-    let currentDate = new date()
-    let time = currentDate.getHours() + ":"+ currentDate.getMinutes() + ":" + currentDate.getSeconds();
-     document.getElementById("time").innerHTML = "The current time is: " + time;
-    </script>
+     <b id="time"></b>
+
+        <script>
+            function update() {
+            // Get current date and time
+            let date = new Date();
+
+            // Get the hour, minute and second from the current date
+            let hour = date.getHours() - 12;
+            let minute = date.getMinutes();
+            let second = date.getSeconds();
+
+            let time = hour + ":" + minute + ":" + second;
+
+            // Get element with id "time" and change the content
+            document.getElementById("time").innerHTML = "The current time is: " + time;
+            }
+
+            // call the update function every second to update the time
+            setInterval(update, 1000)
+        </script>
 </body>
 </html>
